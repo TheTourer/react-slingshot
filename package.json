@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
-  "version": "7.0.1",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "react-slingshot-emotion",
+  "version": "1.0.0",
+  "description": "Cory House's awesome React Slingshot starter kit, now with Emotion CSS-in-JS! (https://emotion.sh)",
   "engines": {
     "npm": ">=3"
   },
@@ -28,12 +28,15 @@
     "open:cover": "npm run test:cover && opn ./coverage/lcov-report/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
+  "author": "Nick Balsbaugh",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-emotion": "8.0.12",
+    "emotion": "8.0.12",
     "object-assign": "4.1.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
+    "react-emotion": "8.0.12",
     "react-redux": "5.0.5",
     "react-router-dom": "4.2.2",
     "react-router-redux": "5.0.0-alpha.6",
@@ -115,7 +118,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
+    "url": "https://github.com/TheTourer/react-slingshot-emotion"
   },
   "jest": {
     "moduleNameMapper": {
@@ -135,6 +138,9 @@
           "react",
           "react-hmre",
           "stage-1"
+        ],
+        "plugins": [
+          "emotion"
         ]
       },
       "production": {
@@ -155,6 +161,7 @@
           "stage-1"
         ],
         "plugins": [
+          "emotion",
           "transform-react-constant-elements",
           "transform-react-remove-prop-types"
         ]
@@ -164,6 +171,9 @@
           "env",
           "react",
           "stage-1"
+        ],
+        "plugins": [
+          "emotion"
         ]
       }
     }
